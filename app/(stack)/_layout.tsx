@@ -3,7 +3,15 @@ import React from 'react';
 
 const StackLayout = () => {
     return (
-        <Stack>
+        <Stack
+            screenOptions={{
+                // headerShown: false
+                headerShadowVisible: true,
+                contentStyle: {
+                    backgroundColor: 'white'
+                }
+            }}
+        >
             <Stack.Screen
                 name="home/index"
                 options={{
