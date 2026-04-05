@@ -1,12 +1,34 @@
-import { Slot } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Slot, SplashScreen } from 'expo-router';
+import { useEffect } from 'react';
+
+import { useFonts } from 'expo-font';
+
 import './global.css';
 
+SplashScreen.preventAutoHideAsync();
+
 const RootLayout = () => {
+    const [fontsLoaded, error] = useFonts({
+        'WorkSans-Black': require('../assets/fonts/WorkSans-Black.ttf'),
+        'WorkSans-Light': require('../assets/fonts/WorkSans-Light.ttf'),
+        'WorkSans-Medium': require('../assets/fonts/WorkSans-Medium.ttf'),
+    });
 
-    return <SafeAreaView>
-        <Slot />
-    </SafeAreaView>
-}
+    useEffect(() => {
+        if (error) throw error;
 
-export default RootLayout
+        if (fontsLoaded) SplashScreen.hideAsync();
+    }, [fontsLoaded, error]);
+
+    if (!fontsLoaded && !error) return null;
+
+    // return <Stack />
+
+    // return (
+    //     <SafeAreaView>
+    //         <Stack />
+    //     </SafeAreaView>
+    // );
+    return <Slot />;
+};
+export default RootLayout;

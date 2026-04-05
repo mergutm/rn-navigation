@@ -25,12 +25,27 @@ const HomeScreen = () => {
                 onPress={() => router.push('/productos')}
             >Productos</CustomButton>
 
+
+            <CustomButton
+                className='my-2'
+                color='secondary'
+                onPress={() => router.push('/settings')}
+            >settings</CustomButton>
+
+
+            <CustomButton
+                className='my-2'
+                color='tertiary'
+                onPress={() => router.push('/profile')}
+            >profile</CustomButton>
+
+
             <CustomButton
                 className='my-2'
                 color='primary'
                 variant='text-only'
-                onPress={() => router.push('/productos')}
-            >Productos</CustomButton>
+                onPress={() => router.push('/settings')}
+            >settings</CustomButton>
 
             <Link href='/productos' asChild>
                 <CustomButton
