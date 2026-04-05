@@ -8,8 +8,17 @@ module.exports = {
   presets: [require("nativewind/preset")],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'space-bold': ['SpaceMono-Bold', 'sans-serif'],
+        'space-regular': ['SpaceMono-Regular', 'sans-serif'],
+        'work-black': ['WorkSans-Black', 'sans-serif'],
+        'work-light': ['WorkSans-Light', 'sans-serif'],
+        'work-medium': ['WorkSans-Medium', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
+
 
