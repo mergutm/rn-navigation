@@ -12,6 +12,15 @@ const StackLayout = () => {
                 }
             }}
         >
+
+            <Stack.Screen
+                name="productos/[id]"
+                options={{
+                    title: "Detalles del producto",
+                    animation: 'fade_from_bottom'
+                }}
+            />
+
             <Stack.Screen
                 name="home/index"
                 options={{
