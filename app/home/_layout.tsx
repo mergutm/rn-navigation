@@ -1,12 +1,10 @@
 import { Slot } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import './global.css';
 
-const RootLayout = () => {
-
+const HomeLayout = () => {
     return <SafeAreaView>
         <Slot />
     </SafeAreaView>
 }
 
-export default RootLayout
+export default HomeLayout
