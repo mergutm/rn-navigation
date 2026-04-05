@@ -14,16 +14,20 @@ const index = () => {
                 </Text>
 
 
-                <Text className='text-2xl font-space-bold text-blue-700'>
+                <Text className='text-2xl font-space-bold text-primary'>
                     font-space-bold
                 </Text>
 
-                <Text className='text-2xl font-space-regular text-blue-700'>
+                <Text className='text-2xl font-space-regular text-secondary'>
+                    font-space-regular
+                </Text>
+
+                <Text className='text-2xl font-space-regular text-secondary-200'>
                     font-space-regular
                 </Text>
 
 
-                <Text className='text-2xl font-work-black text-blue-700'>
+                <Text className='text-2xl font-work-black text-tertiary'>
                     font-work-black
                 </Text>
 

@@ -9,6 +9,17 @@ module.exports = {
 
   theme: {
     extend: {
+
+      colors: {
+        primary: "#49129c",
+        secondary: {
+          DEFAULT: "#B40086",
+          100: "#C51297",
+          200: "#831266",
+        },
+        tertiary: "#EF2967",
+
+      },
       fontFamily: {
         'space-bold': ['SpaceMono-Bold', 'sans-serif'],
         'space-regular': ['SpaceMono-Regular', 'sans-serif'],
