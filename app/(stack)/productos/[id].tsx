@@ -20,7 +20,10 @@ const ProductScreen = () => {
         <View className='p-5 mt-4'>
             <Text className='font-work-black text-2xl text-primary'> {product.title}</Text>
             <Text className=''> {product.description}</Text>
-            <Text className='font-work-black  text-primary'> {product.price}</Text>
+
+            <View className='flex flex-row justify-end mt-3'>
+                <Text className='font-space-bold  text-2xl text-secondary'> {product.price}</Text>
+            </View>
         </View>
     )
 }
