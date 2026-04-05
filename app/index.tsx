@@ -2,7 +2,8 @@ import { Redirect } from 'expo-router';
 import React from 'react';
 
 const index = () => {
-    return <Redirect href='/home' />
+    // return <Redirect href='/home' />
+    return <Redirect href='/tabs/home' />
     // return (
     //     <SafeAreaView>
     //         <View className='mt-10 mx-4'>
