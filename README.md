@@ -50,3 +50,18 @@ export default function TabLayout() {
   );
 }
 ```
+
+# Icons:
+
+https://icons.expo.fyi/Index
+
+
+
+# Menú lateral 
+
+https://docs.expo.dev/router/advanced/drawer/
+
+
+```bash 
+npx expo install @react-navigation/drawer react-native-reanimated react-native-worklets
+```

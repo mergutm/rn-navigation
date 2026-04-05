@@ -5,7 +5,7 @@ const StackLayout = () => {
     return (
         <Stack
             screenOptions={{
-                // headerShown: false
+                headerShown: true,
                 headerShadowVisible: true,
                 contentStyle: {
                     backgroundColor: 'white'
@@ -22,7 +22,7 @@ const StackLayout = () => {
             />
 
             <Stack.Screen
-                name="home/index"
+                name="/tabs/(stack)/home/index"
                 options={{
                     title: "Pantalla inicial",
                     animation: 'fade_from_bottom'
