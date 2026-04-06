@@ -10,7 +10,7 @@ const ProductScreen = () => {
 
     const { id } = useLocalSearchParams();
 
-    const product = products.find(p => p.id == id);
+    const product = products.find(p => p.id === id);
 
     if (!product) {
         return <Redirect href='/' />

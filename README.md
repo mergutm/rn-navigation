@@ -65,3 +65,7 @@ https://docs.expo.dev/router/advanced/drawer/
 ```bash 
 npx expo install @react-navigation/drawer react-native-reanimated react-native-worklets
 ```
+
+## Ver rutas
+
+Control + Barra espaciadora

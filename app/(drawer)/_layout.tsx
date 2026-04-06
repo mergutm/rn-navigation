@@ -24,7 +24,8 @@ const Drawerlayout = () => {
                 headerShadowVisible: true,
                 sceneStyle: {
                     backgroundColor: "rgba(255,255,255,0.8)"
-                }
+                },
+                headerShown: true
             }}
         >
             <Drawer.Screen
@@ -46,6 +47,20 @@ const Drawerlayout = () => {
                     title: 'Horario',
                     drawerIcon: ({ color, size }) => (
                         <Ionicons name='time-outline' color={color} size={size} ></Ionicons>
+                    )
+                }}
+            />
+
+
+
+            <Drawer.Screen
+                name="(tabs)" // This is the name of the page and must match the url from root
+                options={{
+                    headerShown: false,
+                    drawerLabel: 'Tabs + Stack',
+                    title: 'Tabs + Stack',
+                    drawerIcon: ({ color, size }) => (
+                        <Ionicons name='albums-outline' color={color} size={size} ></Ionicons>
                     )
                 }}
             />

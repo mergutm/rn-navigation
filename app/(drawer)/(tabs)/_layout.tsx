@@ -8,13 +8,23 @@ export default function TabLayout() {
         <Tabs screenOptions={{
             tabBarActiveTintColor: 'blue',
             tabBarShowLabel: true,
-            headerShown: false,
+            // headerShown: false,
             // tabBarStyle: {
             //     backgroundColor: 'black'
             // },
             // tabBarActiveBackgroundColor: "red"
 
         }}>
+
+            <Tabs.Screen
+                name="(stack)"
+                options={{
+                    headerShown: false,
+                    title: 'Stack',
+                    tabBarIcon: ({ color }) => <AntDesign name="apple" size={28} color={color} />,
+
+                }}
+            />
             <Tabs.Screen
                 name="home/index"
                 options={{
@@ -25,19 +35,11 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="favorites/index"
                 options={{
-                    title: 'Settings',
+                    title: 'Favorites',
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="cog" color={color} />,
                 }}
             />
 
-            <Tabs.Screen
-                name="(stack)"
-                options={{
-                    title: 'Stack',
-                    tabBarIcon: ({ color }) => <AntDesign name="apple" size={28} color={color} />,
-
-                }}
-            />
         </Tabs>
     );
 }

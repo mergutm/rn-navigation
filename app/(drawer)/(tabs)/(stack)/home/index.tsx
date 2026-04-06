@@ -1,9 +1,18 @@
-import CustomButton from '@/components/shared/CustomButton'
-import { Link, router } from 'expo-router'
-import { View } from 'react-native'
+import CustomButton from '@/components/shared/CustomButton';
+import { DrawerActions } from '@react-navigation/native';
+import { Link, router, useNavigation } from 'expo-router';
+import { View } from 'react-native';
 
 
 const HomeScreen = () => {
+
+    const navigation = useNavigation();
+
+    const onToggleDrawer = () => {
+        navigation.dispatch(DrawerActions.openDrawer)
+    }
+
+
     return (
 
         <View className='px-10 py-5'>
@@ -23,7 +32,8 @@ const HomeScreen = () => {
                 className='my-2'
                 color='primary'
                 // onPress={() => router.push('/productos')}
-                onPress={() => router.push('/tabs/(stack)/productos')}
+                // onPress={() => router.push('/tabs/(stack)/productos')}
+                onPress={() => router.push('/productos')}
             >Productos</CustomButton>
 
 
@@ -31,7 +41,8 @@ const HomeScreen = () => {
                 className='my-2'
                 color='secondary'
                 //onPress={() => router.push('/settings')}
-                onPress={() => router.push('/tabs/(stack)/settings')}
+                //onPress={() => router.push('/drawer/tabs/settings')}
+                onPress={() => router.push('/settings')}
             >settings</CustomButton>
 
 
@@ -39,7 +50,7 @@ const HomeScreen = () => {
                 className='my-2'
                 color='tertiary'
                 // onPress={() => router.push('/profile')}
-                onPress={() => router.push('/tabs/(stack)/profile')}
+                onPress={() => router.push('/profile')}
             >profile</CustomButton>
 
 
@@ -48,14 +59,27 @@ const HomeScreen = () => {
                 color='primary'
                 variant='text-only'
                 // onPress={() => router.push('/settings')}
-                onPress={() => router.push('/tabs/(stack)/settings')}
+                // onPress={() => router.push('/drawer/tabs/settings')}
+                onPress={() => router.push('/settings')}
             >settings</CustomButton>
 
-            <Link href='/tabs/(stack)/productos' asChild>
+            {/* <Link href='/drawer/tabs/(stack)/productos' asChild>
+                <CustomButton
+                    className='my-2'
+                    color='primary' >Productos</CustomButton>
+            </Link> */}
+
+            <Link href='/productos' asChild>
                 <CustomButton
                     className='my-2'
                     color='primary' >Productos</CustomButton>
             </Link>
+
+
+            <CustomButton
+                onPress={onToggleDrawer}
+            >Abrir menú</CustomButton>
+
 
         </View>
 

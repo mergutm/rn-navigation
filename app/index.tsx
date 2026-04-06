@@ -5,7 +5,8 @@ const index = () => {
     // return <Redirect href='/home' />
     // return <Redirect href='/tabs/home' />
 
-    return <Redirect href='/drawer/user' />
+    // return <Redirect href='/drawer/tabs/(stack)/productos' />
+    return <Redirect href='/home' />
 
 
     // return (

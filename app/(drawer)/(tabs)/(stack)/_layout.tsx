@@ -1,7 +1,23 @@
-import { Stack } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { DrawerActions } from '@react-navigation/native';
+import { router, Stack, useNavigation } from 'expo-router';
 import React from 'react';
+// import { Text } from 'react-native';
 
 const StackLayout = () => {
+
+    const navigation = useNavigation();
+
+    const onHeaderLeftClick = (canGoBack: boolean | undefined) => {
+        if (canGoBack) {
+            //navigation.dispatch(StackActions.pop());
+            router.back();
+            return;
+        }
+
+        navigation.dispatch(DrawerActions.toggleDrawer);
+    }
+
     return (
         <Stack
             screenOptions={{
@@ -9,7 +25,19 @@ const StackLayout = () => {
                 headerShadowVisible: true,
                 contentStyle: {
                     backgroundColor: 'white'
-                }
+                },
+                // headerLeft: () => <Text>HHHH</Text>
+
+                headerLeft: ({ tintColor, canGoBack }) => (<Ionicons
+                    name={canGoBack ? "arrow-back-outline" : "menu"}
+                    color={tintColor}
+                    size={20}
+
+                    className='mr-3 px-2'
+                    onPress={() => onHeaderLeftClick(canGoBack)}
+                />)
+
+                // headerRight
             }}
         >
 
@@ -22,7 +50,7 @@ const StackLayout = () => {
             />
 
             <Stack.Screen
-                name="/tabs/(stack)/home/index"
+                name="home/index"
                 options={{
                     title: "Pantalla inicial",
                     animation: 'fade_from_bottom'
@@ -49,6 +77,7 @@ const StackLayout = () => {
 
 
             <Stack.Screen
+                // name="settings/index"
                 name="settings/index"
                 options={{
                     title: "Configuración",
