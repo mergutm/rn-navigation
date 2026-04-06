@@ -1,12 +1,21 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Drawer } from 'expo-router/drawer';
 
+import CustomDrawer from '@/components/shared/CustomDrawer';
 import React from 'react';
 
 
 const Drawerlayout = () => {
     return (
         <Drawer
+            // drawerContent={
+            //     () => (
+            //         <CustomDrawer />
+            //     )
+            // }
+
+            drawerContent={CustomDrawer}
+
             screenOptions={{
                 // overlayColor: "#bbf",
                 overlayColor: "rgba(0,0,0,0.3)",
